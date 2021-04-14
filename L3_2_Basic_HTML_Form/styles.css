@@ -1,0 +1,76 @@
+/* Element selector, HTML elements*/
+body { 
+    background-color: rgb(211, 236, 211);
+    color:black;
+    margin:15px;
+}
+/* class selector, to a specified class */
+.black-border {
+    border: 5px solid black;
+}
+.lorem {
+    border: 2px dashed black;
+    width: 300px;
+    margin: 0 auto;
+}
+/* ID selector, to a specified ID (! use only when not doable with class !) */
+/* ! each ID used in the HTML code should be used only once!! */
+#green-background {
+    background-color: green;
+}
+
+
+p + h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+p {
+    color:rgba(51, 32, 50, 0.459);
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+    font-size: 20px;
+  }
+img.photo {
+	border: 1px solid #999;
+	background-color: #fcfcfc;
+	padding: 2px;
+}
+.stamp {
+	width: 100px;
+	height: 140px;
+	background: #fff url(Clipboard01.jpg) no-repeat;
+	border: 12px dashed #1b1a19;
+}
+/*.stamp p {
+    color: #fff;
+    margin: 10px 10px 0 0;
+    font: bold 20px Georgia, "Times New Roman", Times, serif;
+    text-align: right;
+}
+class selecter met element selector!*/
+
+main{
+    margin:15px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+}
+p{
+    padding: 10px 5px 15px 5px;
+}
+
+.inline-list li {
+    display: inline;
+    padding: 10px;
+}
+@media (min-width: 1024px) {
+    body { 
+        background-color: rgb(152, 226, 152);
+        color:rgba(98, 0, 255, 0.5);
+        margin:15px;
+    }
+    p {
+        font-size: 12px;
+        line-height: 80%;
+    }
+}

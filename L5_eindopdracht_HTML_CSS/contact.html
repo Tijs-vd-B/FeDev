@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+<head>
+    <title>Mijn WincAcademy Eindopdracht L5</title>
+</head>
+
+<body class="container">
+    <header>
+        <h1>WincAcademy Eindopdracht L5 FED</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="candd.html">Cats and Dogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- code to let forms be parsed by netlify -->
+        <form name="contact" method="POST" data-netlify="true">
+            <p>
+                <label>Your Name: <input type="text" name="name" /></label>
+            </p>
+            <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+                <label>Telephone: <input type="tel" name="tel" pattern="[0-9]{10}"></label>
+            </p>
+            <p>
+                <label>Gender:<br>
+                    <input type="radio" id="gender1" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="gender2" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="gender3" name="gender" value="other">
+                    <label for="other">Other</label>
+                </label>
+            </p>
+            <p>
+                <label for="homepage">Add your site</label>
+                <input type="url" id="site" name="site">
+            </p>
+            <p>
+                <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+                <button type="submit">Send</button>
+            </p>
+        </form>
+    </main>
+    <aside>
+        <p>Leave some info to get in touch</p>
+    </aside>
+    <footer>
+        <ul>
+            <li>©2021</li>
+            <li>Tijs-vd-B</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

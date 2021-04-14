@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.notifications {
+  display: flex;
+}
+.notification {
+  width: 300px;
+  border-radius: 8px;
+  border: 2px solid lightgrey;
+  padding: 15px;
+  display: grid;
+  grid-template-rows: 30px 30px 60px 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "name name name pic"
+    "note note note pic"
+    "request request request request"
+    "buttons buttons buttons buttons";
+}
+.name {
+  grid-area: name;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.note {
+  grid-area: note;
+  color: lightgray;
+}
+.request {
+  grid-area: request;
+}
+.pic {
+  grid-area: pic;
+  justify-self: end;
+}
+.note {
+  grid-area: note;
+}
+.buttons {
+  grid-area: buttons;
+  display: flex;
+  border-top: 2px solid lightgray;
+  padding-top: 10px;
+  /* margin: 0; */
+}
+.button-green {
+  padding: 0;
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  border-left: 2px solid springgreen;
+  border-top: 2px solid springgreen;
+  border-bottom: 2px solid springgreen;
+  border-right: 2px solid springgreen;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  color: springgreen;
+  font-size: 1.1rem;
+  font-stretch: semi-condensed;
+  font-weight: bolder;
+  place-self: center stretch;
+}
+.button-red {
+  padding: 0;
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  border-left: 2px solid red;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  border-right: 2px solid red;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  color: red;
+  font-size: 1.1rem;
+  font-stretch: semi-condensed;
+  font-weight: bolder;
+  place-self: center stretch;
+}

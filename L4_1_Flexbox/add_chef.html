@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<head>
+    <!-- hier zet je de code in de head tags -->
+    <title> Register yourself as chef!
+    </title>
+</head>
+
+<body>
+    <!-- code to let forms be parsed by netlify -->
+    <form name="chef_add" method="POST" data-netlify="true">
+        <p>
+            <label>Your Name: <input type="text" name="name"></label>
+        </p>
+        <p>
+            <label>Your Email: <input type="email" name="email"></label>
+        </p>
+        <p>
+            <label>Telephone: <input type="tel" name="tel" pattern="[0-9]{10}"></label>
+        </p>
+        <p>
+            <label>Age: <input type="number" name="age"></label>
+        </p>
+        <p>
+            <label>Birthday: <input type="date" name="birthday" /></label>
+        </p>
+        <p>
+            <label>Gender:<br>
+                <input type="radio" id="gender1" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="gender2" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="gender3" name="gender" value="other">
+                <label for="other">Other</label>
+            </label>
+        </p>
+        <p>
+            <label>Favorite Cuisine:<br>
+                <input type="checkbox" id="cuisine1" name="french">
+                <label for="french"> I love the French cuisine</label><br>
+                <input type="checkbox" id="cuisine2" name="italian">
+                <label for="italian"> I love the Italian cuisine</label><br>
+                <input type="checkbox" id="cuisine3" name="spanish">
+                <label for="spanish"> I love the Spanish cuisine</label><br>
+                <input type="checkbox" id="cuisine4" name="arabic">
+                <label for="arabic"> I love the Arabic cuisine</label><br>
+            </label>
+        </p>
+        <p>
+            <label for="favcolor">Select your favorite appron color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+        </p>
+        <p>
+            <label>Add a short Bio: <textarea maxlength="500" name="bio"></textarea></label>
+        </p>
+        <p>
+            <label for="myfile">Upload your latest recipe:</label>
+            <input type="file" id="recipe" name="recipe">
+        </p>
+        <p>
+            <label for="homepage">Add your recipe-site</label>
+            <input type="url" id="recipe-site" name="recipe-site">
+        </p>
+        <!--        <p>
+            <label>Your Role: <select name="role[]" multiple>
+            <label>Your Role: <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                </select></label>
+        </p> -->
+        <p>
+            <button type="reset">Reset</button>
+            <button type="submit">Send</button>
+        </p>
+    </form>
+</body>
+
+</html>
