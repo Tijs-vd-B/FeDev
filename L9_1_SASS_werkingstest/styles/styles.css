@@ -1,0 +1,23 @@
+header {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  color: #4a2585;
+}
+header button {
+  background: #77a0c2;
+}
+header button:hover {
+  background: red;
+}
+header button::after {
+  content: "hhdiho";
+}
+
+.contact button {
+  background: #77a0c2;
+}
+
+.info p {
+  color: #25852a;
+}/*# sourceMappingURL=styles.css.map */

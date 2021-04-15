@@ -1,0 +1,12 @@
+@mixin tekst-style {
+  max-width: 700px;
+  text-align: center;
+  padding: $std_padding;
+}
+/* Variables */
+$darkest-background: #97d279;
+$light-background: #c0eea9;
+$lightest-background: #ecffe9;
+$line-color: #000;
+$text-color: #090b08;
+$std_padding: 20px;
