@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 body {
-  color: $text-color;
+  color: $clr-text;
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  background: $lightest-background;
+  background: $bckgrnd-lightest;
 }
 h1 {
   font-size: 1.7em;
@@ -32,7 +32,7 @@ h6 {
 }
 a {
   text-decoration: none;
-  color: $text-color;
+  color: $clr-text;
 }
 ul {
   list-style: none;
@@ -41,7 +41,7 @@ ul {
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
-  border: solid 1px $line-color;
+  border: solid 1px $clr-line;
   transition: all 0.3s ease-in;
 }
 .btn:hover,
@@ -64,11 +64,11 @@ form input:last-child {
   flex: 1 0 20%;
   border-left: 0;
   cursor: pointer;
-  background: $light-background;
+  background: $bckgrnd-light;
   transition: all 0.25s ease;
 }
 #submit:hover {
-  background: $line-color;
+  background: $clr-line;
   color: #fff;
   transition: all 0.25s ease;
   -webkit-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
@@ -77,7 +77,7 @@ form input:last-child {
 }
 input {
   padding: 10px;
-  border: 1px solid $line-color;
+  border: 1px solid $clr-line;
 }
 
 /* Pas alleen de onderstaande regels aan */
@@ -89,8 +89,8 @@ input {
   position: fixed;
   width: 100%;
   z-index: 1;
-  padding: $std_padding;
-  background: $light-background;
+  padding: $pddng-std;
+  background: $bckgrnd-light;
   height: 120px;
   -webkit-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
@@ -115,7 +115,7 @@ input {
 .line {
   width: 3em;
   height: 1px;
-  background: $line-color;
+  background: $clr-line;
   margin-right: 1em;
 }
 .line.line-right {
@@ -126,11 +126,11 @@ input {
 
 /* Hero Section */
 .hero {
-  padding: $std_padding;
+  padding: $pddng-std;
   display: flex;
   height: 100vh;
   align-items: center;
-  background: $darkest-background;
+  background: $bckgrnd-dark;
   &__img img {
     display: block;
     height: auto;
@@ -143,7 +143,7 @@ input {
 
 /* Featured Section */
 .featured {
-  padding: $std_padding;
+  padding: $pddng-std;
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +155,7 @@ input {
     @include tekst-style;
     & p {
       text-align: justify;
-      padding: $std_padding;
+      padding: $pddng-std;
       line-height: 1.4em;
     }
   }
@@ -164,8 +164,8 @@ input {
 /* About Section */
 
 .about {
-  background: $darkest-background;
-  padding: $std_padding;
+  background: $bckgrnd-dark;
+  padding: $pddng-std;
   &__wrapper {
     display: flex;
   }
@@ -197,7 +197,7 @@ input {
 
 /* Contact Section */
 .contact {
-  padding: $std_padding;
+  padding: $pddng-std;
 }
 .wrapper .contact {
   display: flex;
@@ -205,7 +205,7 @@ input {
 }
 .form-wrapper,
 .contact-wrapper {
-  padding: $std_padding;
+  padding: $pddng-std;
 }
 
 .copy-wrapper {

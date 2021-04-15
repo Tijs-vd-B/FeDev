@@ -1,12 +1,12 @@
 @mixin tekst-style {
   max-width: 700px;
   text-align: center;
-  padding: $std_padding;
+  padding: $pddng-std;
 }
 /* Variables */
-$darkest-background: #97d279;
-$light-background: #c0eea9;
-$lightest-background: #ecffe9;
-$line-color: #000;
-$text-color: #090b08;
-$std_padding: 20px;
+$bckgrnd-dark: #97d279;
+$bckgrnd-light: #c0eea9;
+$bckgrnd-lightest: #ecffe9;
+$clr-line: #000;
+$clr-text: #090b08;
+$pddng-std: 20px;
