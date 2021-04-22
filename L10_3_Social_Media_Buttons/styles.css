@@ -1,0 +1,87 @@
+body {
+  background-color: #c3cfe2;
+  font-family: "Roboto", sans-serif;
+  margin: 0 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* awesomefont >> general reset/setup styling for icons - needed on all
+https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements */
+.icon::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* awesomefont >> defining the right font-family/font-face and weight for each style
+https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements */
+.icon-solid::before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+}
+
+.icon-brand::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.social-media {
+  color: #c3cfe2;
+  position: absolute;
+  right: -260px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22px;
+}
+.social-media a {
+  color: #c3cfe2;
+  font-size: 20px;
+}
+.social-media div {
+  height: 2.5rem;
+  width: 300px;
+  justify-content: center;
+  transition: transform 500ms ease-out;
+}
+.social-media div .icon::before {
+  width: 40px;
+  padding: 0.6rem;
+}
+.social-media__blog {
+  background-color: #e17b77;
+}
+.social-media__blog:hover {
+  transform: translateX(-240px);
+}
+.social-media__twitter {
+  background-color: #00aced;
+}
+.social-media__twitter:hover {
+  transform: translateX(-240px);
+}
+.social-media__linkedin {
+  background-color: #007bb6;
+}
+.social-media__linkedin:hover {
+  transform: translateX(-240px);
+}
+.social-media__facebook {
+  background-color: #3b5998;
+}
+.social-media__facebook:hover {
+  transform: translateX(-240px);
+}
+.social-media__github {
+  background-color: #333;
+}
+.social-media__github:hover {
+  transform: translateX(-240px);
+}/*# sourceMappingURL=styles.css.map */

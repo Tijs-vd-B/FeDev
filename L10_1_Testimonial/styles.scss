@@ -1,0 +1,64 @@
+$clr-page: #c3cfe2;
+$clr-card: #fff;
+$clr-card-footer: #686de0;
+$clr-card-additional: #aaabdd;
+
+body {
+  background: $clr-page;
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+}
+
+.card {
+  background-color: $clr-card;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  min-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 0.5rem $clr-card-additional;
+  &__text {
+    height: 350px;
+    & h3 {
+      padding: 2rem 3rem 0rem 3rem;
+      justify-items: left;
+      line-height: 2;
+      font-weight: normal;
+    }
+  }
+  &__footer {
+    width: 100%;
+    height: 150px;
+    background: $clr-card-footer;
+    color: $clr-card;
+    left: 0px;
+    align-items: center;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    & img {
+      position: relative;
+      top: -4.5rem;
+      left: 0px;
+      height: 7rem;
+      border: 6px solid white;
+      border-radius: 50%;
+    }
+    &__name p {
+      position: relative;
+      top: -5rem;
+      left: 0px;
+      letter-spacing: 0.5rem;
+      font-weight: bolder;
+      font-size: 1.1em;
+    }
+    &__link p {
+      color: $clr-card-additional;
+      position: relative;
+      top: -5rem;
+      left: 0px;
+    }
+  }
+}
+// footer testimonial - paars/blauw: #686de0
+// Achtergrond pagina - grijs: #c3cfe2
+// Achtergrondkleur tekst - wit: #fff
