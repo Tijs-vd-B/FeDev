@@ -29,6 +29,20 @@ if (name == "Sarah" || name == "Bram") {
   console.log("Wat een leuke naam! Geniet van deze gratis consumptie!!");
 }
 
+// 'proper' else if
+if (totalAmount >= 50) {
+  console.log(
+    "Dank voor je enorme bestelling, daar krijg je een portie nachos bij!"
+  );
+} else if (totalAmount >= 25) {
+  console.log(
+    "Dank voor je behoorlijke bestelling, daar krijg je een portie (vega)bitterballen bij!"
+  );
+} else {
+  console.log("Dank voor je bestelling!");
+}
+
+// nested if works too
 if (totalAmount >= 25) {
   if (totalAmount >= 50) {
     console.log(
