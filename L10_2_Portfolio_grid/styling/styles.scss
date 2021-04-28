@@ -9,15 +9,18 @@ body {
 }
 
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto;
   margin: 0.5rem;
   gap: 0.5rem;
   &__image {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    // width: 100%;
+    width: 97vw;
+    aspect-ratio: 1 / 1; // so nice to have square images
     // height: width;
-    overflow: hidden;
+    overflow: hidden; // hides the bottom of the image when not square
     border-radius: 5px;
     margin: 0px;
     padding: 0px;
@@ -61,36 +64,47 @@ body {
 }
 @media (min-width: 600px) {
   .portfolio {
+    grid-template-columns: auto auto;
     &__image {
-      width: 49.3%;
+      // width: 49.3%; // this worked with flex
+      width: 48vw; //vw seems to works with grid
     }
   }
 }
+
 @media (min-width: 1024px) {
   .portfolio {
+    grid-template-columns: auto auto auto;
     &__image {
-      width: 32.5%;
+      // width: 32.5%;
+      width: 32vw;
     }
   }
 }
 @media (min-width: 1440px) {
   .portfolio {
+    grid-template-columns: auto auto auto auto;
     &__image {
-      width: 24%;
+      // width: 24%;
+      width: 24.1vw;
     }
   }
 }
 @media (min-width: 1920px) {
   .portfolio {
+    grid-template-columns: auto auto auto auto auto;
     &__image {
-      width: 19%;
+      // width: 19%;
+      width: 19.3vw;
     }
   }
 }
 @media (min-width: 2560px) {
   .portfolio {
+    grid-template-columns: auto auto auto auto auto auto;
     &__image {
-      width: 14%;
+      // width: 14%;
+      width: 16vw;
     }
   }
 }
