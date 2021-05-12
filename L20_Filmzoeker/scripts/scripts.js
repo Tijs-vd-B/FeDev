@@ -6,29 +6,28 @@
 // console.log(names(movies));
 const elementMovieList = document.getElementById("movie-list");
 
-// adds li elements (with content from array) to ul movie-list
+// adds elements (with content from array) to movie-list
 const addMoviesToDom = function (array) {
   array.forEach((e) => {
     let newObjItem = document.createElement("obj");
-    newObjItem.classList.add("portfolio__image");
+    newObjItem.classList.add("movie-list__image");
     // newListItem.class = "movie-container__item";
     let newAItem = document.createElement("a");
     newAItem.href = "https://www.imdb.com/title/" + e.imdbID;
     newAItem.target = "blank";
     newAItem.classList.add("button");
     let newImgItem = document.createElement("img");
-    newImgItem.classList.add("movie-container__item__image");
     newImgItem.src = e.Poster;
     newImgItem.alt = e.Title;
     let newBtnItem = document.createElement("div");
     newBtnItem.classList.add("button");
     newBtnContent = document.createElement("p");
-    // newListItem.classList.add("movie-list-item");
+    // newListItem.classList.add("movie-list-item"); // no longer needed
     elementMovieList.appendChild(newObjItem);
     newObjItem.appendChild(newImgItem);
     // newObjItem.appendChild(newBtnItem);
     // newBtnItem.appendChild(newAItem);
-    newObjItem.appendChild(newAItem);
+    newObjItem.appendChild(newAItem); // a item with button class > whole area is the link
     newAItem.appendChild(newBtnContent);
     newBtnContent.appendChild(document.createTextNode("Read more"));
   });
@@ -78,7 +77,7 @@ const filterMovieAge = function (year) {
   addMoviesToDom(movies.filter((n) => n.Year >= year));
 };
 
-// clears the li elements added
+// clears the elements added
 const clearMovieList = function () {
   let elementMovieListItem = elementMovieList.querySelectorAll("obj");
   elementMovieListItem.forEach(function (e) {
@@ -87,15 +86,18 @@ const clearMovieList = function () {
 };
 
 // Adding search functionality
+const searchBox = document.getElementById("search-text");
 function getInputValue() {
   // Selecting the input element and get its value
-  let inputVal = document.getElementById("search-text").value;
+  let inputVal = searchBox.value;
   // Using the value
   console.log("searching with:", inputVal);
   filterMovieTitle(inputVal);
 }
+// pressing enter also works in the input field
+searchBox.onchange = function () {
+  filterMovieTitle(searchBox.value);
+};
 
-addMoviesToDom(movies); //start is all movies anyways
-// movies.forEach((element) => {
-//   console.log(parseInt(element.Year), element.Year);
-// });
+//start is all movies anyways
+addMoviesToDom(movies);
