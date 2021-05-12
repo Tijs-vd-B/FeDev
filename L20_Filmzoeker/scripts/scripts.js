@@ -49,6 +49,7 @@ radioList.forEach(function (btn) {
         break;
       case "avengers-movies":
         console.log(e.target.value);
+
         filterMovieTitle("Avengers");
         break;
       case "batman-movies":
