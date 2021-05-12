@@ -3,76 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filmzoeker</title>
+    <title>Portfolio Grid</title>
     <script defer type="text/javascript" src="scripts/movies.js"></script>
     <script defer type="text/javascript" src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="styling/styles.css" />
   </head>
-
+  <nav>
+    <form id="radio" class="radio">
+      <!-- <h1>Radio Color Picker</h1> -->
+      <input
+        type="radio"
+        name="movie-filter"
+        id="all-movies"
+        value="all-movies"
+        checked
+      />
+      <label for="all-movies"><span class="all-movies">all movies</span></label>
+      <input
+        type="radio"
+        name="movie-filter"
+        id="latest-movies"
+        value="latest-movies"
+      />
+      <label for="latest-movies"
+        ><span class="latest-movies">latest movies</span></label
+      >
+      <input
+        type="radio"
+        name="movie-filter"
+        id="avengers-movies"
+        value="avengers-movies"
+      />
+      <label for="avengers-movies"
+        ><span class="avengers-movies">Avengers movies</span></label
+      >
+      <input
+        type="radio"
+        name="movie-filter"
+        id="batman-movies"
+        value="batman-movies"
+      />
+      <label for="batman-movies"
+        ><span class="batman-movies">Batman movies</span></label
+      >
+      <input
+        type="radio"
+        name="movie-filter"
+        id="x-men-movies"
+        value="x-men-movies"
+      />
+      <label for="x-men-moviese"
+        ><span class="x-men-movies">X-men movies</span></label
+      >
+      <input
+        type="radio"
+        name="movie-filter"
+        id="princess-movies"
+        value="princess-movies"
+      />
+      <label for="princess-movies"
+        ><span class="princess-movies">Princess movies</span></label
+      >
+    </form>
+  </nav>
   <body>
-    <header><h1>Get your kix from our flix</h1></header>
-    <nav>
-      <form id="radio" class="radio">
-        <!-- <h1>Radio Color Picker</h1> -->
-        <input
-          type="radio"
-          name="movie-filter"
-          id="all-movies"
-          value="all-movies"
-          checked
-        />
-        <label for="all-movies"
-          ><span class="all-movies">all movies</span></label
-        >
-        <input
-          type="radio"
-          name="movie-filter"
-          id="latest-movies"
-          value="latest-movies"
-        />
-        <label for="latest-movies"
-          ><span class="latest-movies">latest movies</span></label
-        >
-        <input
-          type="radio"
-          name="movie-filter"
-          id="avengers-movies"
-          value="avengers-movies"
-        />
-        <label for="avengers-movies"
-          ><span class="avengers-movies">Avengers movies</span></label
-        >
-        <input
-          type="radio"
-          name="movie-filter"
-          id="batman-movies"
-          value="batman-movies"
-        />
-        <label for="batman-movies"
-          ><span class="batman-movies">Batman movies</span></label
-        >
-        <input
-          type="radio"
-          name="movie-filter"
-          id="x-men-movies"
-          value="x-men-movies"
-        />
-        <label for="x-men-moviese"
-          ><span class="x-men-movies">X-men movies</span></label
-        >
-        <input
-          type="radio"
-          name="movie-filter"
-          id="princess-movies"
-          value="princess-movies"
-        />
-        <label for="princess-movies"
-          ><span class="princess-movies">Princess movies</span></label
-        >
-      </form>
-    </nav>
-    <div class="movie-container">
-      <ul id="movie-list"></ul>
+    <div class="portfolio" id="movie-list">
+      <!-- <div class="portfolio__image">
+        <img src="pics/01.jpg" alt="01" />
+        <div class="button"><p>Read more</p></div>
+      </div> -->
     </div>
-    <footer></footer>
   </body>
 </html>

@@ -9,18 +9,28 @@ const elementMovieList = document.getElementById("movie-list");
 // adds li elements (with content from array) to ul movie-list
 const addMoviesToDom = function (array) {
   array.forEach((e) => {
-    let newListItem = document.createElement("li");
+    let newObjItem = document.createElement("obj");
+    newObjItem.classList.add("portfolio__image");
+    // newListItem.class = "movie-container__item";
     let newAItem = document.createElement("a");
-    // let imdbLink = ;
     newAItem.href = "https://www.imdb.com/title/" + e.imdbID;
     newAItem.target = "blank";
+    newAItem.classList.add("button");
     let newImgItem = document.createElement("img");
+    newImgItem.classList.add("movie-container__item__image");
     newImgItem.src = e.Poster;
     newImgItem.alt = e.Title;
+    let newBtnItem = document.createElement("div");
+    newBtnItem.classList.add("button");
+    newBtnContent = document.createElement("p");
     // newListItem.classList.add("movie-list-item");
-    elementMovieList.appendChild(newListItem);
-    newListItem.appendChild(newAItem);
-    newAItem.appendChild(newImgItem);
+    elementMovieList.appendChild(newObjItem);
+    newObjItem.appendChild(newImgItem);
+    // newObjItem.appendChild(newBtnItem);
+    // newBtnItem.appendChild(newAItem);
+    newObjItem.appendChild(newAItem);
+    newAItem.appendChild(newBtnContent);
+    newBtnContent.appendChild(document.createTextNode("Read more"));
   });
 };
 // console.log(movieTitles(movies)); // test
@@ -28,11 +38,10 @@ const addMoviesToDom = function (array) {
 const radioList = document.querySelectorAll("#radio");
 radioList.forEach(function (btn) {
   btn.addEventListener("change", function (e) {
-    let wordInMovieTitle = "";
     switch (e.target.value) {
       case "all-movies":
         console.log(e.target.value);
-        filterMovieTitle(wordInMovieTitle);
+        filterMovieTitle("");
         break;
       case "latest-movies":
         console.log(e.target.value);
@@ -40,30 +49,28 @@ radioList.forEach(function (btn) {
         break;
       case "avengers-movies":
         console.log(e.target.value);
-        wordInMovieTitle = "Avengers";
-        filterMovieTitle(wordInMovieTitle);
+
+        filterMovieTitle("Avengers");
         break;
       case "batman-movies":
         console.log(e.target.value);
-        wordInMovieTitle = "Batman";
-        filterMovieTitle(wordInMovieTitle);
+        filterMovieTitle("Batman");
         break;
       case "x-men-movies":
-        console.log(e.target.value);
-        wordInMovieTitle = "X-Men";
-        filterMovieTitle(wordInMovieTitle);
+        filterMovieTitle("X-Men");
         break;
       case "princess-movies":
         console.log(e.target.value);
-        wordInMovieTitle = "Princess";
-        filterMovieTitle(wordInMovieTitle);
+        filterMovieTitle("Princess");
         break;
     }
   });
 });
 const filterMovieTitle = function (name) {
   clearMovieList();
-  addMoviesToDom(movies.filter((n) => n.Title.includes(name)));
+  addMoviesToDom(
+    movies.filter((n) => n.Title.includes(name))
+  );
 };
 
 const filterMovieAge = function (year) {
@@ -74,7 +81,7 @@ const filterMovieAge = function (year) {
 
 // clears the li elements added
 const clearMovieList = function () {
-  let elementMovieListItem = elementMovieList.querySelectorAll("li");
+  let elementMovieListItem = elementMovieList.querySelectorAll("obj");
   elementMovieListItem.forEach(function (e) {
     elementMovieList.removeChild(e);
   });
