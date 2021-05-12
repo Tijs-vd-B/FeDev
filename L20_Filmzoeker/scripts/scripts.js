@@ -49,7 +49,6 @@ radioList.forEach(function (btn) {
         break;
       case "avengers-movies":
         console.log(e.target.value);
-
         filterMovieTitle("Avengers");
         break;
       case "batman-movies":
@@ -69,7 +68,7 @@ radioList.forEach(function (btn) {
 const filterMovieTitle = function (name) {
   clearMovieList();
   addMoviesToDom(
-    movies.filter((n) => n.Title.includes(name))
+    movies.filter((n) => n.Title.toLowerCase().includes(name.toLowerCase()))
   );
 };
 
@@ -86,6 +85,15 @@ const clearMovieList = function () {
     elementMovieList.removeChild(e);
   });
 };
+
+// Adding search functionality
+function getInputValue() {
+  // Selecting the input element and get its value
+  let inputVal = document.getElementById("search-text").value;
+  // Using the value
+  console.log("searching with:", inputVal);
+  filterMovieTitle(inputVal);
+}
 
 addMoviesToDom(movies); //start is all movies anyways
 // movies.forEach((element) => {
