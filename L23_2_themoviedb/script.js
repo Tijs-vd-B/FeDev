@@ -67,13 +67,9 @@ const addTopRated1975ListItemsToDom = async () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // setSingleMovie();
   addGenreListItemsToDom();
   addFavoriteTitleToDom("tt11655202");
   addTopRatedListItemsToDom();
   addTopRatedActionListItemsToDom();
   addTopRated1975ListItemsToDom();
-  // setTopRatedMovies();
-  // addTopMoviesForYearXListener();
-  // addTopMoviesForGenreXListener();
 });
