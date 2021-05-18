@@ -44,8 +44,8 @@ async function getTopRatedActionMovies() {
 }
 
 async function getTopRated1975Movies() {
-  const primaryReleaseRear = 1975;
-  const apiUrl = `${baseUrl}/discover/movie?page=1&language=en-US&primary_release_year=${primaryReleaseRear}&include_adult=false&include_video=false&page=1&api_key=${API_KEY}`;
+  const primaryReleaseYear = 1975;
+  const apiUrl = `${baseUrl}/discover/movie?page=1&language=en-US&primary_release_year=${primaryReleaseYear}&include_adult=false&include_video=false&page=1&api_key=${API_KEY}`;
   try {
     const response = await fetch(apiUrl);
     return await response.json();
